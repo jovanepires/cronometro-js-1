@@ -35,5 +35,10 @@
     font-weight: bold;
     cursor: pointer;
     overflow: hidden;
-	border-radius: 3px;
+	  border-radius: 3px;
+}
+
+.controllers button:disabled {
+  background-color: #8AC;
+  cursor: default;
 }
