@@ -6,7 +6,6 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 3px;
 }
 
 .row {
@@ -18,16 +17,17 @@
 #timer {
 	font-family: Helvetica, Arial, sans-serif;
 	margin-bottom: .5em;
-	font-size: 5em;
+	font-size: 4em;
   width: 2.5em;
-  background-color: #999;
+  margin-left: -10%;
 }
 
-.controllers {
-  
+h1 {
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  margin-left: -15%;
 }
 
-.controllers button {
+button {
     background-color: #579;
     color: white;
     height: 3em;
@@ -42,7 +42,7 @@
 	  border-radius: 3px;
 }
 
-.controllers button:disabled {
+button:disabled {
   background-color: #8AC;
   cursor: default;
 }
