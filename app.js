@@ -19,6 +19,7 @@ document.getElementById('start').addEventListener('click', function() {
 			minute++;
 			document.getElementById('minute').innerHTML = parseInt(minute).toFixed(0) > 9 ? parseInt(minute).toFixed(0) : '0' + parseInt(minute).toFixed(0);
 			second = 0;
+			millisecond = 0;
 		}
 
   		document.getElementById('millisecond').innerHTML = parseInt(millisecond).toFixed(0);
