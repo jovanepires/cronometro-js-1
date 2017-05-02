@@ -31,8 +31,8 @@ button {
     background-color: #579;
     color: white;
     height: 3em;
-    min-width: 55px;
-    padding: 5px 12px;
+    min-width: 4.2em;
+    padding: .3em .75em;
     border: none;
     outline: none;
     letter-spacing: 0;
