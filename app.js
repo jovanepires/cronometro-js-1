@@ -11,16 +11,16 @@ document.getElementById('start').addEventListener('click', function() {
 
 		if (millisecond > 9) {
 			second++;
+
+			if (second > 59) {
+				minute++;
+				document.getElementById('minute').innerHTML = parseInt(minute).toFixed(0) > 9 ? parseInt(minute).toFixed(0) : '0' + parseInt(minute).toFixed(0);
+				second = 0;
+			}
+
 			document.getElementById('second').innerHTML = parseInt(second).toFixed(0) > 9 ? parseInt(second).toFixed(0) : '0' + parseInt(second).toFixed(0);
 			millisecond = 0;
-		}
-
-		if (second > 59) {
-			minute++;
-			document.getElementById('minute').innerHTML = parseInt(minute).toFixed(0) > 9 ? parseInt(minute).toFixed(0) : '0' + parseInt(minute).toFixed(0);
-			second = 0;
-			millisecond = 0;
-		}
+		} 
 
   		document.getElementById('millisecond').innerHTML = parseInt(millisecond).toFixed(0);
 
