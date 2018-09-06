@@ -1,3 +1,8 @@
+@font-face {
+  font-family: DharmaGothicE_ExBold_R;
+  src: url(fonts/DharmaGothicE_ExBold_R.otf);
+}
+
 .container {
 	margin-top: 5em;
   display: -webkit-flex;
@@ -10,12 +15,12 @@
 
 .row {
 	padding: 3em;
-	background-color: #EEE;
+	/*background-color: #EEE;*/
   width: 11em;
 }
 
 #timer {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: DharmaGothicE_ExBold_R /*Helvetica, Arial, sans-serif*/;
 	margin-bottom: .5em;
 	font-size: 4em;
   width: 2.5em;
@@ -28,18 +33,19 @@ h1 {
 }
 
 button {
-    background-color: #579;
-    color: white;
-    height: 3em;
-    min-width: 4.2em;
+    /*background-color: #579;*/
+    color: black;
+    height: 2.5em;
+    min-width: 10.2em;
     padding: .3em .75em;
-    border: none;
+    border: solid 3px black;
     outline: none;
     letter-spacing: 0;
     font-weight: bold;
     cursor: pointer;
     overflow: hidden;
-	  border-radius: 3px;
+    border-radius: 30px;
+    letter-spacing: 3px;
 }
 
 button:disabled {
