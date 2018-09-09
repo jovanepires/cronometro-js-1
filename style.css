@@ -3,52 +3,62 @@
   src: url(fonts/DharmaGothicE_ExBold_R.otf);
 }
 
+@font-face {
+  font-family: HelveticaNeueLTPro-ThEx;
+  src: url(fonts/HelveticaNeueLTPro-ThEx.otf);
+}
+
 .container {
 	margin-top: 5em;
   display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
+  display: flex;  
   align-items: center;
-  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;  
+  text-align: center;
+}
+
+h1 {
+  font-family: HelveticaNeueLTPro-ThEx, Helvetica, Arial, sans-serif;  
+  letter-spacing: 6px;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
 }
 
 .row {
 	padding: 3em;
-	/*background-color: #EEE;*/
-  width: 11em;
 }
 
 #timer {
 	font-family: DharmaGothicE_ExBold_R /*Helvetica, Arial, sans-serif*/;
-	margin-bottom: .5em;
-	font-size: 4em;
+	font-size: 15em;
   width: 2.5em;
-  margin-left: -10%;
-}
-
-h1 {
-  font-family: Tahoma, Helvetica, Arial, sans-serif;
-  margin-left: -15%;
+  margin-top: -10px;
 }
 
 button {
-    /*background-color: #579;*/
-    color: black;
-    height: 2.5em;
-    min-width: 10.2em;
-    padding: .3em .75em;
-    border: solid 3px black;
-    outline: none;
-    letter-spacing: 0;
-    font-weight: bold;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 30px;
-    letter-spacing: 3px;
+  color: black;
+  height: 2.5em;
+  min-width: 10.2em;
+  padding: .3em .75em;
+  border: solid 3px black;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+  letter-spacing: 3px;
+  background-color: #fff;
+  position: relative;
+  top: -20px;
+}
+
+button:hover{
+  background-color: #f2f2f2;
 }
 
 button:disabled {
-  background-color: #8AC;
   cursor: default;
 }
