@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>CronômetroJS</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -9,14 +10,16 @@
 <body>
 <div class="container">
 	<div class="row">
-		<h1>CronômetroJS</h1>
+		<h1 id="fontType">SANS SERIF</h1>
 		<div id="timer">
-			<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">0</span>
+			<!-- <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span> -->
+			<span id="second">10</span>
 		</div>
 		<div class="controllers">
-			<button class="btn btn-primary" id="start"><i class="fa fa-play" aria-hidden="true"></i></button>
+			<button class="btn btn-primary" id="btAgain">DE NOVO</button>
+			<!-- <button class="btn btn-primary" id="start"><i class="fa fa-play" aria-hidden="true"></i></button>
 			<button class="btn btn-danger" id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
-			<button class="btn btn-default" id="reload"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+			<button class="btn btn-default" id="reload"><i class="fa fa-refresh" aria-hidden="true"></i></button> -->
 		</div>
 	</div>
 </div>

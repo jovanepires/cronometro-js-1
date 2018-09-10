@@ -1,42 +1,31 @@
-var minute = 0;
-var second = 0;
-var millisecond = 0;
-var cron;
+let second = 0;
+let cron;
+let fontTypesDefault = ["SERIF","SANS SERIF","DISPLAY","HANDWRITING"];
 
-document.getElementById('start').addEventListener('click', function() {
-	document.getElementById('start').disabled = true;
-	document.getElementById('reload').disabled = true;
-	cron = setInterval(function() {
-		millisecond++;
+document.getElementById('btAgain').addEventListener('click', function() {		
 
-		if (millisecond > 9) {
-			second++;
+	//Define Font
+	document.getElementById('fontType').innerHTML = getFontType();
 
-			if (second > 59) {
-				minute++;
-				document.getElementById('minute').innerHTML = parseInt(minute).toFixed(0) > 9 ? parseInt(minute).toFixed(0) : '0' + parseInt(minute).toFixed(0);
-				second = 0;
-			}
-
-			document.getElementById('second').innerHTML = parseInt(second).toFixed(0) > 9 ? parseInt(second).toFixed(0) : '0' + parseInt(second).toFixed(0);
-			millisecond = 0;
-		} 
-
-  		document.getElementById('millisecond').innerHTML = parseInt(millisecond).toFixed(0);
-
-	}, 100);
-});
-
-document.getElementById('pause').addEventListener('click', function(){
+	//Reset Timer
 	clearInterval(cron);
-	document.getElementById('start').disabled = false;
-	document.getElementById('reload').disabled = false;
+	second = 10;
+	document.getElementById('second').innerHTML = 10;
+
+	//Start Timer
+	cron = setInterval(function() {
+		
+		second--;			
+		if(second < 0){
+			clearInterval(cron);
+		}else{
+			document.getElementById('second').innerHTML = parseInt(second).toFixed(0) > 9 ? parseInt(second).toFixed(0) : '0' + parseInt(second).toFixed(0);
+		}			
+	}, 1000);	
 });
 
-document.getElementById('reload').addEventListener('click', function(){
-	minute = 0;
-	second = 0;
-	document.getElementById('millisecond').innerHTML = '0';
-	document.getElementById('second').innerHTML = '00';
-	document.getElementById('minute').innerHTML = '00';
-});
+let getFontType = () => {
+	let lastOption = document.getElementById('fontType').textContent;
+	let fontTypes = fontTypesDefault.filter( fontType => fontType != lastOption );
+	return fontTypes[Math.floor(Math.random()*fontTypes.length)];
+}
