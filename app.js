@@ -1,6 +1,6 @@
 let second = 0;
 let cron;
-let fontTypesDefault = ["SERIF","SANS SERIF","DISPLAY","HANDWRITING"];
+let fontTypesDefault = ["SERIF","SANS SERIF","DISPLAY","SCRIPT"];
 
 document.getElementById('btAgain').addEventListener('click', function() {		
 
@@ -10,7 +10,7 @@ document.getElementById('btAgain').addEventListener('click', function() {
 	//Reset Timer
 	clearInterval(cron);
 	second = 10;
-	document.getElementById('second').innerHTML = 10;
+	document.getElementById('second').innerHTML = '00:10';
 
 	//Start Timer
 	cron = setInterval(function() {
@@ -19,7 +19,7 @@ document.getElementById('btAgain').addEventListener('click', function() {
 		if(second < 0){
 			clearInterval(cron);
 		}else{
-			document.getElementById('second').innerHTML = parseInt(second).toFixed(0) > 9 ? parseInt(second).toFixed(0) : '0' + parseInt(second).toFixed(0);
+			document.getElementById('second').innerHTML = '00:' + (parseInt(second).toFixed(0) > 9 ? parseInt(second).toFixed(0) : '0' + parseInt(second).toFixed(0));
 		}			
 	}, 1000);	
 });
