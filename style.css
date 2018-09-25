@@ -36,7 +36,8 @@ h1 {
 
 #timer {
 	font-family: DharmaGothicE_ExBold_R;
-	font-size: 15em;
+  font-size: 15em;
+  margin-top: -40px;
 }
 
 button {
@@ -52,6 +53,8 @@ button {
   border-radius: 30px;
   letter-spacing: 3px;
   background-color: #fff;
+  position: relative;
+  top: -50px;
 }
 
 button:hover{
