@@ -9,15 +9,18 @@
 }
 
 .container {
-	margin-top: 5em;
-  display: -webkit-flex;
   display: flex;  
   align-items: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-justify-content: center;  
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  transform: scale(1.5);
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  transform: scale(2);
 }
 
 h1 {
@@ -29,14 +32,11 @@ h1 {
 }
 
 .row {
-	padding: 3em;
 }
 
 #timer {
-	font-family: DharmaGothicE_ExBold_R /*Helvetica, Arial, sans-serif*/;
+	font-family: DharmaGothicE_ExBold_R;
 	font-size: 15em;
-  width: 2.5em;
-  margin-top: -10px;
 }
 
 button {
@@ -52,8 +52,6 @@ button {
   border-radius: 30px;
   letter-spacing: 3px;
   background-color: #fff;
-  position: relative;
-  top: -20px;
 }
 
 button:hover{
