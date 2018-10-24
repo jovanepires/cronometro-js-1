@@ -2,4 +2,4 @@
 Cronômetro em JS
 
 
-# [![Cronômetro em JS](screenshot.png)]
+[[screenshot.png]]
