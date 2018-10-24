@@ -1,5 +1,4 @@
 # cronometro-js
 Cronômetro em JS
 
-
-[[screenshot.png]]
+![Cronômetro em JS](screenshot.png)
